@@ -1,0 +1,237 @@
+/* style.css */
+:root {
+    --bg-dark: #0b0c10;      /* Deep luxury slate */
+    --bg-card: #16181f;      /* Slightly lighter for contrast */
+    --gold: #d4af37;         /* Premium Gold accent */
+    --emerald: #50c878;      /* Success/Growth accent */
+    --text-main: #e0e2e4;
+    --text-muted: #8b929a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: rgba(11, 12, 16, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover, .links a.active {
+    color: var(--gold);
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.hero h1 span {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* Roadmap Graph Header */
+.roadmap-wrapper {
+    margin: 60px auto;
+    max-width: 900px;
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.roadmap-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.roadmap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 80px;
+}
+
+.circle {
+    width: 45px;
+    height: 45px;
+    background: var(--bg-dark);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.step:hover .circle {
+    transform: scale(1.1);
+    background: var(--gold);
+    color: var(--bg-dark);
+}
+
+.step.final .circle {
+    background: var(--emerald);
+    border-color: var(--emerald);
+    color: var(--bg-dark);
+}
+
+.label {
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.line {
+    position: absolute;
+    top: 22px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: rgba(212, 175, 55, 0.3);
+    z-index: 1;
+}
+
+/* Content Sections */
+.section {
+    padding: 60px 10%;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+}
+
+.section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(212, 175, 55, 0.3);
+    margin-left: 20px;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 4px solid var(--gold);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card .subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Project Specifics */
+.project-card {
+    border-left: 4px solid var(--emerald);
+}
+
+.project-card h3 {
+    color: var(--emerald);
+}
+
+.tech-stack {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(255,255,255,0.05);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--gold);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
