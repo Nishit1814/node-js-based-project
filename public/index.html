@@ -1,49 +1,61 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Nexus | Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-
-    <nav>
-        <div class="logo">Project Nexus</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="project.html">Architecture</a>
-            <a href="#demo" class="btn btn-primary">Live Demo</a>
+  <div class="wrapper">
+    <div class="top-bar">
+      <i class="material-icons">expand_more</i>
+      <span>Now Playing</span>
+      <i class="material-icons">more_horiz</i>
+    </div>
+    <div class="img-area">
+      <img src="" alt="">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
         </div>
-    </nav>
+        <i id="close" class="material-icons">close</i>
+      </div>
+      <ul>
+        <!-- here li list are coming from js -->
+      </ul>
+    </div>
+  </div>
 
-    <header class="hero">
-        <h1>Next-Gen Application <br>Deployment</h1>
-        <p>A highly scalable, secure, and automated project built for modern infrastructure. Showcasing seamless integration and advanced system architecture.</p>
-        <a href="project.html" class="btn btn-primary">Explore Architecture</a>
-    </header>
-
-    <section class="container">
-        <h2 class="section-title">Core Features</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>High Availability</h3>
-                <p>Designed with fault tolerance in mind to ensure the application remains accessible even during server outages or high traffic loads.</p>
-            </div>
-            <div class="card">
-                <h3>Automated Pipelines</h3>
-                <p>Fully automated build and deployment processes ensuring that new code is tested and delivered rapidly with zero downtime.</p>
-            </div>
-            <div class="card">
-                <h3>Secure Infrastructure</h3>
-                <p>Implemented strict security protocols, isolated networks, and encrypted data transmission to protect user information.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 8th Semester Final Project Submission.</p>
-    </footer>
+  <script src="js/music-list.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
