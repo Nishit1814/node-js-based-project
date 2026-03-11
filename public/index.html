@@ -84,5 +84,207 @@
         }
 
         .roadmap-title {
-            text-align
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.4rem;
+            color: var(--text-main);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .roadmap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            width: 100px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-dark);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .step:hover .circle { transform: scale(1.1); background: var(--gold); color: var(--bg-dark); }
+        .step.final .circle { background: var(--emerald); border-color: var(--emerald); color: var(--bg-dark); }
+
+        .label { font-size: 0.9rem; text-align: center; color: var(--text-muted); font-weight: 600; }
+
+        .line {
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: rgba(212, 175, 55, 0.3);
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.3);
+            margin-left: 20px;
+        }
+
+        /* Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 4px solid var(--gold);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card h3 { color: var(--gold); font-size: 1.4rem; margin-bottom: 10px; }
+        .card .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Project Specifics */
+        .project-card { border-left: 4px solid var(--emerald); }
+        .project-card h3 { color: var(--emerald); }
+        
+        .tech-stack { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag {
+            background: rgba(255,255,255,0.05);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--gold);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>DevOps<span>Engineer</span></strong></div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Architecting <span>Infrastructure</span></h1>
+        <p>B.E. Information Technology | 8th Semester</p>
+
+        <div class="roadmap-wrapper">
+            <h2 class="roadmap-title">My Technical Roadmap</h2>
+            <div class="roadmap">
+                <div class="line"></div>
+                <div class="step">
+                    <div class="circle">1</div>
+                    <div class="label">Linux OS</div>
+                </div>
+                <div class="step">
+                    <div class="circle">2</div>
+                    <div class="label">AWS Services</div>
+                </div>
+                <div class="step">
+                    <div class="circle">3</div>
+                    <div class="label">Docker</div>
+                </div>
+                <div class="step">
+                    <div class="circle">4</div>
+                    <div class="label">Jenkins</div>
+                </div>
+                <div class="step">
+                    <div class="circle">5</div>
+                    <div class="label">Git/GitHub</div>
+                </div>
+                <div class="step final">
+                    <div class="circle">★</div>
+                    <div class="label">3-Tier Project</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience & Training</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Linux Administrator Intern</h3>
+                <div class="subtitle">3-Month Internship</div>
+                <p>Gained hands-on experience in server management. Handled user administration, monitored system resources, and utilized shell scripts to automate daily operational tasks on enterprise Linux systems.</p>
+            </div>
+            
+            <div class="card">
+                <h3>DevOps Engineering Track</h3>
+                <div class="subtitle">DevOps TechLab</div>
+                <p>Completed intensive training focused on modern infrastructure. Mastered Linux foundation, AWS cloud provisioning, containerization with Docker, and building CI/CD deployment pipelines using Jenkins.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 60px;">Core Skills Arsenal</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Operating System & Cloud</h3>
+                <p>Strong command over <strong>Linux</strong> architecture and scripting. Proficient in configuring <strong>AWS</strong> services including EC2, S3, IAM, and setting up secure VPC networks.</p>
+            </div>
+            <div class="card">
+                <h3>Containers & Automation</h3>
+                <p>Skilled in creating <strong>Docker Images & Containers</strong> for application isolation, and automating the integration process using <strong>Jenkins</strong> and <strong>Git/GitHub</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Academic Projects</h2>
+        
+        <div class="card project-card" style="max-width: 900px; margin: 0 auto;">
+            <h3>8th Semester Final Project: 3-Tier Application CI/CD Pipeline</h3>
+            <div class="subtitle">Automated Deployment Architecture</div>
+            
+            <p style="margin-bottom: 20px;">
+                Designed and deployed a highly available 3-tier application infrastructure. Created a fully automated CI/CD pipeline to bridge code integration and cloud hosting, eliminating manual deployment steps.
+            </p>
+            
+            <ul style="margin-left: 20px; color: var(--text-main); margin-bottom: 25px;">
+                <li style="margin-bottom: 10px;">Configured Linux-based environments securely on AWS EC2 instances within a custom VPC.</li>
+                <li style="margin-bottom: 10px;">Established Git/GitHub webhooks to trigger Jenkins pipelines automatically upon code commits.</li>
+                <li style="margin-bottom: 10px;">Containerized the application tiers using Docker, ensuring consistency across environments.</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span class="tag">Linux</span>
+                <span class="tag">AWS (EC2, S3, IAM, VPC)</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">Git/GitHub</span>
+            </div>
+        </div>
+    </section>
+
+</body>
 </html>
