@@ -1,92 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Portfolio | 8th Sem</title>
-    <link rel="stylesheet" href="/style.css"> 
-</head>
-<body>
-    <nav>
-        <div class="logo"><strong>DevOps<span>Engineer</span></strong></div>
-        <div class="links">
-            <a href="/" class="active">Home</a>
-            <a href="/projects">Projects</a>
-        </div>
-    </nav>
+    <title>DevOps Portfolio | Premium</title>
+    <style>
+        /* CSS yahan HTML ke andar hi hai taaki koi link error na aaye */
+        :root {
+            --bg-dark: #0b0c10;
+            --bg-card: #16181f;
+            --gold: #d4af37;
+            --emerald: #50c878;
+            --text-main: #e0e2e4;
+            --text-muted: #8b929a;
+        }
 
-    <header class="hero">
-        <h1>Architecting <span>Infrastructure</span></h1>
-        <p>B.E. Information Technology | 8th Semester Portfolio</p>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        <div class="roadmap-wrapper">
-            <h2 class="roadmap-title">My DevOps Journey</h2>
-            <div class="roadmap">
-                <div class="line"></div>
-                <div class="step">
-                    <div class="circle">1</div>
-                    <div class="label">Linux OS</div>
-                </div>
-                <div class="step">
-                    <div class="circle">2</div>
-                    <div class="label">AWS</div>
-                </div>
-                <div class="step">
-                    <div class="circle">3</div>
-                    <div class="label">Docker</div>
-                </div>
-                <div class="step">
-                    <div class="circle">4</div>
-                    <div class="label">Jenkins</div>
-                </div>
-                <div class="step">
-                    <div class="circle">5</div>
-                    <div class="label">Git/GitHub</div>
-                </div>
-                <div class="step final">
-                    <div class="circle">★</div>
-                    <div class="label">Final Project</div>
-                </div>
-            </div>
-        </div>
-    </header>
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for links */
+        }
 
-    <section class="section">
-        <h2 class="section-title">Experience & Training</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Linux Administrator Intern</h3>
-                <div class="subtitle">3-Month Internship Experience</div>
-                <p>Applied core OS concepts in a real-world environment. Managed user permissions, monitored system processes, and utilized shell scripting to automate routine administration tasks to ensure server reliability.</p>
-            </div>
-            
-            <div class="card">
-                <h3>DevOps Engineering Track</h3>
-                <div class="subtitle">Trained at DevOps TechLab</div>
-                <p>Completed intensive, hands-on training focusing on modern infrastructure. Mastered cloud provisioning, containerization, and building robust deployment pipelines.</p>
-            </div>
-        </div>
-    </section>
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    <section class="section">
-        <h2 class="section-title">Technical Arsenal</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Cloud & OS</h3>
-                <p>Deep understanding of <strong>Linux</strong> architecture. Proficient in <strong>AWS</strong> services including EC2 instances, S3 storage, IAM security, and VPC networking.</p>
-            </div>
-            <div class="card">
-                <h3>Containers & CI/CD</h3>
-                <p>Skilled in writing Dockerfiles, managing <strong>Docker Images & Containers</strong>, and automating build/deploy workflows using <strong>Jenkins</strong> pipelines.</p>
-            </div>
-        </div>
-    </section>
-    <nav>
-        <div class="logo"><strong>DevOps<span>Engineer</span></strong></div>
-        <div class="links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a> </div>
-    </nav>
-</body>
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: rgba(11, 12, 16, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo { font-size: 1.5rem; letter-spacing: 1px; }
+        .logo span { color: var(--gold); }
+
+        .links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover { color: var(--gold); }
+
+        /* Sections Styling */
+        section {
+            padding: 120px 10% 60px; /* Padding top given for fixed navbar */
+            min-height: 100vh;
+        }
+
+        .hero { text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; font-weight: 300; }
+        .hero h1 span { color: var(--gold); font-weight: 600; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); }
+
+        /* Roadmap Graph */
+        .roadmap-wrapper {
+            margin: 60px auto 0;
+            width: 100%;
+            max-width: 1000px;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .roadmap-title {
+            text-align
 </html>
